@@ -11,6 +11,20 @@
       <h1 class="display-3 mt-4">Bootstrap Kurs</h1>
       <p class="lead mb-5">Übersicht über alle Kurslektionen</p>
       <div id="buttonContainer" class="grid"></div>
+      <footer class="footer fixed-bottom bg-dark-subtle text-white py-3">
+        <div class="container">
+          <div class="p-1">
+            <a
+              href="https://github.com/GutHoch2/Tutorial_Bootstrap_Fundamentals_1"
+              target="_blank"
+              class="text-info text-decoration-none fw-semibold"
+            >
+              🔗 Link zum Repo
+            </a>
+          </div>
+          <p class="mb-0 small pb-3">© 2025 GutHoch2</p>
+        </div>
+      </footer>
     </div>
     <style>
       .btn {
@@ -18,7 +32,7 @@
       }
       @media (min-width: 768px) {
         .btn {
-            width: auto;
+          width: auto;
         }
       }
     </style>
@@ -63,6 +77,7 @@
         files.forEach((file) => {
           const btn = document.createElement("a");
           btn.href = "02_Section/bootstrap-sandbox/" + file;
+          btn.target = "_blank";
           btn.className = "btn btn-outline-info fw-semibold m-1 p-4";
           btn.textContent = file.replace(".html", "").replace(/_/g, " ");
           container.appendChild(btn);

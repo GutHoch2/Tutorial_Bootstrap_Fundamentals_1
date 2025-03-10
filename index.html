@@ -1,44 +1,86 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bootstrap Kurs Übersicht</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
-        .container { max-width: 800px; margin-top: 50px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
-        .btn-tile { text-align: center; padding: 15px; border-radius: 8px; background: #0d6efd; color: white; text-decoration: none; font-weight: bold; }
-        .btn-tile:hover { background: #0b5ed7; }
+      .container {
+        max-width: 800px;
+        margin-top: 50px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+      }
+      .btn-tile {
+        text-align: center;
+        padding: 15px;
+        border-radius: 8px;
+        background: #0d6efd;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .btn-tile:hover {
+        background: #0b5ed7;
+      }
     </style>
-</head>
-<body>
-
-    <div class="container text-center">
-        <h1>Bootstrap Kurs</h1>
-        <p>Übersicht über alle Kurslektionen</p>
-        <div id="buttonContainer" class="grid"></div>
+  </head>
+  <body>
+    <div class="container-md text-center text-white">
+      <h1 class="display-3">Bootstrap Kurs</h1>
+      <p class="lead">Übersicht über alle Kurslektionen</p>
+      <div id="buttonContainer" class="grid"></div>
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Liste der HTML-Dateien (manuell pflegen)
-            const files = [
-                "01-containers.html", "02-typography.html", "03-display-position.html", 
-                "04-background-text-colors.html", "05-spacing.html", "06-sizing-borders-shadows.html"
-            ];
+      document.addEventListener("DOMContentLoaded", function () {
+        // Liste der HTML-Dateien (manuell pflegen)
+        const files = [
+          "01-containers.html",
+          "02-typography.html",
+          "03-display-position.html",
+          "04-background-text-colors.html",
+          "05-spacing.html",
+          "06-sizing-borders-shadows.html",
+          "07-breakpoints.html",
+          "08-buttons.html",
+          "09-navbar.html",
+          "09-z_darkmode.html",
+          "10-bootstrap-grid-columns.html",
+          "11-flexbox.html",
+          "12-cards.html",
+          "13-list-groups-badges.html",
+          "14-forms-input.html",
+          "15-form-validation-display.html",
+          "16-alerts-progress-bars.html",
+          "17-tables.html",
+          "18-breadcrumb-pagination.html",
+          "19-other-css-utilities.html",
+          "20-darkmode-and-variables.html",
+          "21-dropdowns.html",
+          "22-accordion-collapse.html",
+          "23-carousel.html",
+          "24-toasts.html",
+          "25-spinners.html",
+          "26-modals.html",
+          "27-popovers-tooltips.html",
+          "28-darkmode-toggle.html",
+        ];
 
-            const container = document.getElementById("buttonContainer");
+        const container = document.getElementById("buttonContainer");
 
-            files.forEach(file => {
-                const btn = document.createElement("a");
-                btn.href = "02_Section/bootstrap-sandbox/" + file;
-                btn.className = "btn-tile";
-                btn.textContent = file.replace(".html", "").replace(/_/g, " "); // Schönere Anzeige
-                container.appendChild(btn);
-            });
+        files.forEach((file) => {
+          const btn = document.createElement("a");
+          btn.href = "02_Sections/bootstrap-sandbox/" + file;
+          btn.className = "btn btn-outline-info fw-semibold";
+          btn.textContent = file.replace(".html", "").replace(/_/g, " ");
+          container.appendChild(btn);
         });
+      });
     </script>
-
-</body>
+  </body>
 </html>

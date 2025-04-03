@@ -27,4 +27,6 @@
 26-modals.html
 27-popovers-tooltips.html
 28-darkmode-toggle.html
+Z1_alerts.html
+Z2_model.html
 template.html

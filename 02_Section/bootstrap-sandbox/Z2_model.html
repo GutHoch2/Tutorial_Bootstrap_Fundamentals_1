@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
+    <title>Bootstrap Sandbox | Popovers & Tooltips</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Modal Demo</h1>
+      <!-- Button to Open the Modal -->
+      <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#myModal">Open modal</button>
+
+      <!-- The Modal -->
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Modal Heading</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body d-flex justify-content-center">
+              <div class="card" style="width: 400px">
+                <img class="card-img-top" src="./assets/error.png" alt="Card image" />
+                <div class="card-body">
+                  <h4 class="card-title">Fehler</h4>
+                  <p class="card-text">Das ist ein Fehler</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
